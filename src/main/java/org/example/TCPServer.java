@@ -39,6 +39,12 @@ public class TCPServer {
                 if (bytesRead != -1) {
                     String clientData = new String(buffer, 0, bytesRead); // Convert bytes to string
                     System.out.println("Received data: " + clientData);
+                } else {
+                    System.out.println("No data received from client.");
+                }
+                if (bytesRead != -1) {
+                    String clientData = new String(buffer, 0, bytesRead); // Convert bytes to string
+                    System.out.println("Received data: " + clientData);
                     System.out.println("Data in Hex:" + convertStringToHex(clientData));
 
 
